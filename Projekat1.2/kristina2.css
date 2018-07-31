@@ -1,0 +1,317 @@
+* {
+	box-sizing: border-box;
+  }
+
+body { 
+
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+	background-color: #ffcccc;
+	position: fixed;
+	width: 100%;
+}
+
+.logo {
+	width: 20%;
+	text-align: center;
+}
+
+.logo img {
+	height: 100px;
+	width: auto;
+	margin-right: 40px;
+}
+
+header h1 {
+	width: 100%;
+	align-self: center;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 100px;
+	width: 100% !important;
+	background-color: #ffe6e6;
+	justify-content: space-between;
+}
+
+nav > ul {
+	width: 100%;
+	display: flex;
+	-webkit-padding-start: 0;
+}
+
+nav > ul > li {
+	width: 25%;
+	list-style-type: none;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	color: black;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown ul {
+	display: none;
+	-webkit-padding-start: 0;
+	position: absolute;
+	right: 0;
+	top: 42px;
+	background-color: #ffe6e6;
+}
+
+.dropdown:hover ul.dropdown-content {
+	display: block;
+}
+
+.dropdown ul li {
+	list-style-type: none;
+	padding: 10px 42px;
+    font-size: .8em;
+    text-align: center;
+}
+
+.dropdown ul li a {
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 150px;
+	height: 100%;
+    width: 100%;
+   
+}
+
+section {
+	width: 100%;
+	padding: 2.5%;
+	background-color:  #ff3333;
+}
+
+section h1 {
+	font-size: 1.3em;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.left {
+	float: left;
+	margin-right: 10px;
+}
+
+.right {
+	float: right;
+	margin-left: 10px;
+}
+
+section img {
+	width: 150px;
+	height: auto;
+	margin-top: 0;
+}
+
+section p {
+	text-align: justify;
+}
+
+aside {
+	width: 65%;
+	background-color: #ff1a1a;
+	text-align: center;
+}
+
+aside h2 {
+	margin-top: 25%;
+    margin-bottom: 20px;
+}
+
+aside a {
+	text-decoration: none;
+}
+
+footer {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	background-color:  #ff0000;
+	position: fixed;
+	bottom: 0;
+	flex-direction: row;
+}
+
+footer p {
+	width: 25%;
+	text-align: center;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding: 10px 0;
+}
+
+footer p a {
+	text-decoration: none;
+	color: black;
+	font-size: 1.2em;
+}
+/* Media Queries */
+@media (min-width: 600px) {
+	img.left {
+		width: 10vh;
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 0;
+		margin-top: 5px;
+	}
+
+	img.right {
+		width: 23vh;
+		float: right;
+		margin-left: 5px;
+		margin-bottom: 0;
+		margin-top: 7px;
+	}
+}
+
+@media (min-width: 800px) {
+
+	header {
+		position: fixed;
+		top: 0;
+		z-index: 1;
+	}
+
+	nav > ul {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	nav > ul > li > a {
+		display: inline-block;
+		font-size: .9em;
+		padding: 3px;
+		border-bottom: none;
+	}
+
+.dropdown-bar ul {
+		width: 25%;
+    	text-align: center;
+	}
+
+	.dropdown-bar > ul > li > a {
+		font-size: .9em;	}
+
+
+	main {
+		margin-top: 150px;
+	}
+	
+	section img {
+		width: 30vh !important;
+	}
+
+	footer {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+	}
+
+}
+
+@media(min-width: 1000px) {
+	
+	body, header, footer {
+		width: 75%;
+	}
+	nav {
+		width: 75% !important;
+	}
+}
+
+
+@media (min-width: 1044px) {
+	nav > ul > li {
+		padding: 15px 0;
+	}
+
+	main {
+		margin-top: 90px;
+	}
+}
+
+@media (min-width: 1125px) {
+
+	main h1 {
+		font-size: 1em;
+	}
+}
+
+@media (min-width: 1268px) {
+
+	nav > ul > li {
+		width: 25%;
+		text-align: center;
+	}
+}
+
+	main {
+		flex-direction: row;
+		margin-top: 150px;
+	}
+
+	section {
+		flex-grow: 1;
+	}
+
+	section h1,
+	aside h1 {
+		font-size: 1.8em;
+	}
+
+	section img {
+		width: 35vh !important;
+	}
+	
+	aside {
+		width: 255px;
+	}
+
+	aside article {
+		margin-bottom: 30px;
+	}
+
+	aside article p strong {
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+
+	footer > ul > li > a {
+		display: inline-block;
+	}
+
+	footer > ul > li,
+	li.place-info {
+		width: 35%;
+		text-align: center;
+	}
+
+}
